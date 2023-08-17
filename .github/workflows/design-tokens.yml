@@ -1,0 +1,29 @@
+name: Export and Transform Design Tokens
+
+on:
+  repository_dispatch:
+    types: [update-design-tokens]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Export Design Tokens from Figma
+        run: |
+          # Your script to export design tokens from Figma here
+
+      - name: Transform Design Tokens using Amazon Style Dictionary
+        run: |
+          # Your script to transform design tokens using Amazon Style Dictionary here
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email "qba.meller2204@gmail.com"
+          git config --global user.name "Kuba"
+          git add .
+          git commit -m "Update design tokens"
+          git push
