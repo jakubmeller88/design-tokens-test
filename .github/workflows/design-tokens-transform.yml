@@ -21,10 +21,17 @@ jobs:
           # Create a JSON file with the design tokens
           echo "$TOKENS" > design-tokens.json
 
-      - name: Commit and Push Changes
+      - name: Configure Git
         run: |
           git config --global user.email "qba.meller2204@gmail.com"
           git config --global user.name "Kuba"
+          git config --global credential.helper store
+          git config --global push.default current
+
+      - name: Commit and Push Changes
+        run: |
           git add design-tokens.json
           git commit -m "Add design tokens JSON file"
-          git push
+          git push --set-upstream origin $GITHUB_REF
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
