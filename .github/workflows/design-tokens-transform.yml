@@ -12,14 +12,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Export Design Tokens from Figma
+      - name: Create Design Tokens JSON File
         run: |
-          # Your script to export design tokens from Figma here
+          # Parse the payload sent from the dispatch
+          PAYLOAD_FILE=$GITHUB_EVENT_PATH
+          TOKENS=$(jq -r '.client_payload.tokens' $PAYLOAD_FILE)
+          
+          # Create a JSON file with the design tokens
+          echo "$TOKENS" > design-tokens.json
 
-      - name: Add Design Tokens to Repository
+      - name: Commit and Push Changes
         run: |
           git config --global user.email "qba.meller2204@gmail.com"
           git config --global user.name "Kuba"
-          git add .
-          git commit -m "Update design tokens"
+          git add design-tokens.json
+          git commit -m "Add design tokens JSON file"
           git push
