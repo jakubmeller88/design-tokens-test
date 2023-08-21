@@ -65,6 +65,42 @@
           "exportKey": "color"
         }
       }
+    },
+    "red": {
+      "description": "",
+      "type": "color",
+      "value": "#e90f0fff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:b4a2f64b0ee5d538b36dd4c297a33aecfa7821e4,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "lemon": {
+      "description": "",
+      "type": "color",
+      "value": "#e5e90fff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:31e73d47779c1490249d885160e6976b113673ed,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "black": {
+      "description": "",
+      "type": "color",
+      "value": "#000000ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:8ffd87d29d9c44da8f3bcfa19b9c85de17202c05,",
+          "exportKey": "color"
+        }
+      }
     }
   },
   "font": {
