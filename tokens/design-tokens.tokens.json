@@ -101,6 +101,18 @@
           "exportKey": "color"
         }
       }
+    },
+    "green": {
+      "description": "",
+      "type": "color",
+      "value": "#13e90fff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:6ed6899803de5433727ed1c27db53da76fb2f199,",
+          "exportKey": "color"
+        }
+      }
     }
   },
   "font": {
