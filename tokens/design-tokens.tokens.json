@@ -125,6 +125,18 @@
           "exportKey": "color"
         }
       }
+    },
+    "dark-gray": {
+      "description": "",
+      "type": "color",
+      "value": "#8f8f8fff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:f2a5dc8a2019d7d99cbba36a3bb0694769d19262,",
+          "exportKey": "color"
+        }
+      }
     }
   },
   "font": {
